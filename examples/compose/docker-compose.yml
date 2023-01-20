@@ -28,14 +28,14 @@ services:
     restart: always
 
   msmtpd:
-    image: crazymax/msmtpd:latest
+    image: crazymax/msmtpd:1.8.22
     container_name: librenms_msmtpd
     env_file:
       - "./msmtpd.env"
     restart: always
 
   librenms:
-    image: librenms/librenms:latest
+    image: librenms/librenms:22.12.0
     container_name: librenms
     hostname: librenms
     cap_add:
@@ -65,7 +65,7 @@ services:
     restart: always
 
   dispatcher:
-    image: librenms/librenms:latest
+    image: librenms/librenms:22.12.0
     container_name: librenms_dispatcher
     hostname: librenms-dispatcher
     cap_add:
@@ -92,7 +92,7 @@ services:
     restart: always
 
   syslogng:
-    image: librenms/librenms:latest
+    image: librenms/librenms:22.12.0
     container_name: librenms_syslogng
     hostname: librenms-syslogng
     cap_add:
@@ -125,7 +125,7 @@ services:
     restart: always
 
   snmptrapd:
-    image: librenms/librenms:latest
+    image: librenms/librenms:22.12.0
     container_name: librenms_snmptrapd
     hostname: librenms-snmptrapd
     cap_add:
